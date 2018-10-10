@@ -1,6 +1,6 @@
-import * as angular from 'angular';
+export function routes($urlRouterProvider, $stateProvider) {
+    $urlRouterProvider.otherwise('/');
 
-export default function routes($routeProvider) {
-    $routeProvider.when('/', { template: "<home></home>" });
+    $stateProvider.state({ name: 'home', url: '/', component: 'home' });
 }
-routes.$inject = ['$routeProvider'];
+routes.$inject = ['$urlRouterProvider', '$stateProvider'];

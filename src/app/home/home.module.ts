@@ -1,6 +1,6 @@
 import * as angular from 'angular';
 
-import routes from './home.routes';
+import { routes } from './home.routes';
 
 import homeComponent from './home';
 import { HomeService } from './home.service';

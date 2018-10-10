@@ -1,6 +1,4 @@
-import * as angular from 'angular';
-
-export default function routes($routeProvider) {
-    $routeProvider.when('/settings', { template: "<settings></settings>" });
+export function routes($urlRouterProvider, $stateProvider) {
+    $stateProvider.state({ name: 'settings', url: '/settings', component: 'settings' });
 }
-routes.$inject = ['$routeProvider'];
+routes.$inject = ['$urlRouterProvider', '$stateProvider'];
