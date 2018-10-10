@@ -14,12 +14,12 @@ Includes:
 ## Usage
 Start Live Dev Server
 ```js
-npm run dev
+npm start
 ```
 
 Build Project and deploy to "dist":
 ```js
-npm run build
+npm run build:prod
 ```
 
 ## Dependencies
@@ -28,7 +28,7 @@ npm run build
 * Angular-Animate
 * Angular-Aria
 * Angular-Hammer
-* Angular-Route
+* UI-Router
 
 ## TODO
 Edit Webconfig with DEV and PROD vars
