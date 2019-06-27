@@ -1,22 +1,15 @@
 class SettingsCtrl {
-    constructor(
-        private $rootScope: ng.IRootScopeService
-    ) {
+    static $inject = ['$rootScope'];
+    constructor(private $rootScope: ng.IRootScopeService) {
     }
 
-    $onInit() {
-    }
-
-    theme = "blue";
-    themes = ["blue", "green"];
+    theme: string = "blue";
+    themes: Array<string> = ["blue", "green"];
 
     updateTheme() {
-        console.warn("update theme");
         this.$rootScope.$broadcast("update-theme", this.theme);
     }
 }
-
-SettingsCtrl.$inject = ["$rootScope"];
 
 export default {
     bindings: {},

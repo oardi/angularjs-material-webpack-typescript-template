@@ -1,21 +1,14 @@
-import { HomeService } from './home.service';
 
 class HomeCtrl {
-    constructor(
-        private $mdSidenav: ng.material.ISidenavService,
-        private homeService: HomeService
-    ) {
+    static $inject = [];
+    constructor() {
         this.test = "some binding";
     }
 
     test: string;
 
-    $onInit() {
-        console.log("homeCtrl.oninit");
-    }
-
     testClick() {
-        alert("asdf")
+        alert("you clicked the button")
     }
 
     folders = [
@@ -24,8 +17,6 @@ class HomeCtrl {
         { title: "list item 3", icon: "folder", updated: new Date('1/1/16') },
     ];
 }
-
-HomeCtrl.$inject = ["$mdSidenav", "homeService"];
 
 export default {
     bindings: {},
